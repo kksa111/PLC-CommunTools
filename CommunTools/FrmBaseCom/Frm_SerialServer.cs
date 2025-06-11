@@ -28,6 +28,7 @@ namespace CommunTools
         public Frm_SerialServer()
         {
             InitializeComponent();
+            ResizeHelper.EnableResizing(this);
             InitializeSerialSet();
         }
 

@@ -31,6 +31,7 @@ namespace CommunTools
         public Frm_TCPClient()
         {
             InitializeComponent();
+            ResizeHelper.EnableResizing(this);
         }
 
         public byte[] recBy;        //传递串口接收到的数据

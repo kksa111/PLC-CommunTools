@@ -18,6 +18,7 @@ namespace CommunTools
         public Frm_Twain()
         {
             InitializeComponent();
+            ResizeHelper.EnableResizing(this);
         }
 
         /// <summary>

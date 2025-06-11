@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using CommunTools.Common;
 using System.Windows.Forms;
 
 namespace CommunTools
@@ -17,6 +18,7 @@ namespace CommunTools
         public Frm_SCHNEIDER()
         {
             InitializeComponent();
+            ResizeHelper.EnableResizing(this);
         }
 
         private void btnConnect_BtnClick(object sender, EventArgs e)
