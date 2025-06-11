@@ -40,6 +40,7 @@ namespace CommunTools
         private void FrmMenu_Load(object sender, EventArgs e)
         {
             GetMenuGroup();
+            this.Text = $"硬件及协议通讯工具 - {Common.UserSession.UserName}({Common.UserSession.Role})";
 
             int gpbIndex = 0;
             int totolHeight = 0;
