@@ -891,6 +891,16 @@ namespace Commun.NetWork.ModbusTCP
             }
             return (byte)result;
         }
+
+        public byte[] SendData(byte[] sendData)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Close()
+        {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 
