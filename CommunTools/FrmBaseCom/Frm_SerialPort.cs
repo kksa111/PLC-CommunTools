@@ -33,6 +33,7 @@ namespace CommunTools
         public Frm_SerialPort()
         {
             InitializeComponent();
+            ResizeHelper.EnableResizing(this);
             InitializeSerialSet();
         }
 

@@ -4,6 +4,7 @@ using System;
 using System.Text;
 using System.Windows.Forms;
 using ZCS_Common;
+using CommunTools.Common;
 
 namespace CommunTools
 {
@@ -12,6 +13,7 @@ namespace CommunTools
         public Frm_ComWebSocket()
         {
             InitializeComponent();
+            ResizeHelper.EnableResizing(this);
             TextBox.CheckForIllegalCrossThreadCalls = false;
         }
 

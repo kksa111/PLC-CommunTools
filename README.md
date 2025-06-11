@@ -9,3 +9,7 @@
 > ![Image](https://raw.githubusercontent.com/SmallRob/PLC-CommunTools/master/ShotCuts/20240703-143325.jpg)
 > ![Image](https://github.com/SmallRob/PLC-CommunTools/blob/d3ed25f5bef66c5dd662ae61d56bf1f8cb4a8ad8/ShotCuts/server.PNG)
 > ![Image](https://github.com/SmallRob/PLC-CommunTools/blob/d3ed25f5bef66c5dd662ae61d56bf1f8cb4a8ad8/ShotCuts/client.PNG)
+
+## 登录功能
+
+项目现已加入简单的用户登录界面，支持管理员和普通用户两种角色。登录窗口以及其余常用窗口都可以根据需要调整大小，方便在不同分辨率下使用。

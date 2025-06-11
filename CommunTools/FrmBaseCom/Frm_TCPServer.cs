@@ -31,6 +31,7 @@ namespace CommunTools
         public Frm_TCPServer()
         {
             InitializeComponent();
+            ResizeHelper.EnableResizing(this);
             TextBox.CheckForIllegalCrossThreadCalls = false;
         }
 

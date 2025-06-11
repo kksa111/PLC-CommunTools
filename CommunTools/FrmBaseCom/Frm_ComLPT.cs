@@ -22,6 +22,7 @@ namespace CommunTools
         public Frm_ComLPT()
         {
             InitializeComponent();
+            ResizeHelper.EnableResizing(this);
         }
 
         static int portAddress = 0x378; // Typically, 0x378 is the address for LPT1

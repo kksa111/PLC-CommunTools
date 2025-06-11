@@ -71,6 +71,8 @@
     <Compile Include="Common\Twain\TwainGui.cs" />
     <Compile Include="Common\Twain\TwainLib.cs" />
     <Compile Include="Common\Twain\TwainScanCommon.cs" />
+    <Compile Include="Common\UserSession.cs" />
+    <Compile Include="Common\ResizeHelper.cs" />
     <Compile Include="Entity\TCPClient.cs" />
     <Compile Include="Entity\TCPComServer.cs" />
     <Compile Include="Entity\TCPServer.cs" />
@@ -78,6 +80,7 @@
     <Compile Include="Enums\Encoding.cs" />
     <Compile Include="Enums\FuncItemCom.cs" />
     <Compile Include="Enums\SerialPortEnum.cs" />
+    <Compile Include="Enums\UserRole.cs" />
     <Compile Include="FrmBaseCom\Frm_ComLPT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +140,9 @@
     </Compile>
     <Compile Include="FrmBaseCom\Frm_TCPClient.Designer.cs">
       <DependentUpon>Frm_TCPClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
