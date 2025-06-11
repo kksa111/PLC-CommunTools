@@ -40,6 +40,7 @@ namespace CommunTools
         private void FrmMenu_Load(object sender, EventArgs e)
         {
             GetMenuGroup();
+            this.Text = $"硬件及协议通讯工具 - {Common.UserSession.UserName}({Common.UserSession.Role})";
 
             int gpbIndex = 0;
             int totolHeight = 0;
@@ -147,40 +148,23 @@ namespace CommunTools
         /// <param name="originalHeight"></param>
         private void ToggleGroupBox(GroupBox gpb, int originalHeight)
         {
-            if (gpb.Height == originalHeight)
+            bool collapse = gpb.Height == originalHeight;
+            int newHeight = collapse ? 20 : originalHeight;
+
+            foreach (Control control in gpb.Controls)
             {
-                foreach (Control control in gpb.Controls)
-                {
-                    if (!(control is Label))
-                    {
-                        control.Visible = false;
-                    }
-                }
-                gpb.Height = 20; // 折叠后的高度
-
-                // 重新计算窗体高度
-                this.Size = new System.Drawing.Size(Size.Width, Size.Height - originalHeight + 20);
-
-                // 这里有问题，TODO
-
+                if (control is Label)
+                    continue;
+                control.Visible = !collapse;
             }
-            else
-            {
-                foreach (Control control in gpb.Controls)
-                {
-                    control.Visible = true;
-                }
-                gpb.Height = originalHeight;
 
-                // 重新计算窗体高度
-                this.Size = new System.Drawing.Size(Size.Width, Size.Height + originalHeight - 20);
-
-                // 这里有问题，TODO
-            }
+            int delta = newHeight - gpb.Height;
+            gpb.Height = newHeight;
+            this.Height += delta;
 
             // 重新设置最小和最大尺寸
-            this.MinimumSize = this.Size;
-            this.MaximumSize = this.Size;
+            this.MinimumSize = new Size(this.MinimumSize.Width, this.Height);
+            this.MaximumSize = new Size(this.MaximumSize.Width, this.Height);
         }
 
         /// <summary>
